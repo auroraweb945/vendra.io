@@ -1,0 +1,74 @@
+/* src/styles/subscribe-required.css */
+.subscribe-required-container {
+  max-width: 500px;
+  margin: 10% auto;
+  padding: 40px 30px;
+  background: #fff;
+  border-radius: 12px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Title */
+.subscribe-required-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #f107a3, #7b2ff7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Description text */
+.subscribe-required-container p {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Buttons wrapper */
+.subscribe-required-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.subscribe-required-buttons button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Subscribe button */
+.subscribe-required-buttons .subscribe-btn {
+  background: linear-gradient(90deg, #7b2ff7, #f107a3);
+  color: #fff;
+}
+.subscribe-required-buttons .subscribe-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(123,47,247,0.2);
+}
+
+/* Cancel / back button */
+.subscribe-required-buttons .cancel-btn {
+  background: #f4f4f4;
+  color: #333;
+  border: 1px solid #ddd;
+}
+.subscribe-required-buttons .cancel-btn:hover {
+  background: #eee;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}

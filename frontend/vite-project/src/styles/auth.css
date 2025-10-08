@@ -1,0 +1,93 @@
+/* src/styles/auth.css */
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Page background (instead of styling <body>, scope it to .auth-wrapper) */
+.auth-wrapper {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  margin: 15% auto; /* centers it without using body flex */
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.auth-wrapper h2 {
+  margin-bottom: 25px;
+  font-size: 2rem;
+  text-align: center;
+  background: linear-gradient(90deg, #7b2ff7, #f107a3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Form */
+.auth-wrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Inputs */
+.auth-wrapper input {
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.auth-wrapper input:focus {
+  border-color: #7b2ff7;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(123,47,247,0.15);
+}
+
+/* Button */
+.auth-wrapper button {
+  background: linear-gradient(90deg, #7b2ff7, #f107a3);
+  color: #fff;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.auth-wrapper button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+/* Links under the form */
+.auth-wrapper .link {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #555;
+}
+
+.auth-wrapper .link a {
+  color: #7b2ff7;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.auth-wrapper .link a:hover {
+  color: #f107a3;
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}

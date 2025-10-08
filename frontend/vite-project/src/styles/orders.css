@@ -1,0 +1,147 @@
+/* src/styles/orders.css */
+
+.orders-container {
+  padding: 30px;
+  background: linear-gradient(to right, #f9f7ff, #fef6fb);
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow-x: scroll;
+}
+
+/* Title */
+.orders-container h2 {
+  color: var(--primary-color);
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 25px;
+  justify-content: center;
+}
+
+.filters input,
+.filters select,
+.filters button {
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+
+.filters input:focus,
+.filters select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.filters button {
+  background: #7b2ff7;
+  color: white;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.filters button:hover {
+  background: #6001c4;
+}
+
+/* Orders Table */
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.orders-table th {
+  background: #faf8ff;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.orders-table tr:hover {
+  background-color: #fdfaff;
+}
+
+/* Status Badges (consistent with Dashboard) */
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-pending {
+  background-color: #ffe5e5;
+  color: #d9534f;
+}
+
+.status-shipped {
+  background-color: #fff9e6;
+  color: #f0ad4e;
+}
+
+.status-delivered {
+  background-color: #e6ffed;
+  color: #28a745;
+}
+
+td button {
+  background: #7b2ff7;
+  color: white;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+td button:hover {
+  background: #6001c4;
+}
+
+td select {
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .orders-container {
+    padding: 20px;
+  }
+
+  .orders-table th,
+  .orders-table td {
+    font-size: 0.85rem;
+    padding: 10px;
+  }
+}

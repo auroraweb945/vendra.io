@@ -1,0 +1,151 @@
+/* Page container */
+.order-confirmation {
+  text-align: center;
+  padding: 50px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f9f7ff, #fef6fb);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Success icon */
+.success-icon {
+  font-size: 60px;
+  color: #28a745;
+  margin-bottom: 20px;
+  animation: pop 0.6s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Order items list */
+.order-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.order-item-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Total styling */
+.total {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  color: #28a745;
+  text-align: right;
+}
+
+
+/* Heading */
+.order-confirmation h1 {
+  color: #28a745;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Subtext */
+.order-confirmation p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* Order details card */
+.order-details {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  padding: 20px 30px;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto 30px auto;
+  text-align: left;
+}
+
+.order-details h2 {
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  color: #7b2ff7;
+}
+
+.order-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.order-details li {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.order-details li:last-child {
+  border-bottom: none;
+}
+
+/* CTA Button */
+.order-confirmation button {
+  margin-top: 20px;
+  background: linear-gradient(135deg, #7b2ff7, #f107a3);
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.order-confirmation button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Selected color display in order summary */
+.order-color {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 2px 0;
+}
+
+.order-color-circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #aaa;
+  display: inline-block;
+}
+
+.order-color-label {
+  font-size: 12px;
+  color: #444;
+}

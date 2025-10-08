@@ -1,0 +1,473 @@
+/* ------------------------------------------------------
+   CART MODAL - Modern Minimal Style
+------------------------------------------------------ */
+.cart-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 1rem;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Modal box */
+.cart-modal {
+  background: #ffffff;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 0;
+  padding: 2rem;
+  max-height: 90vh;
+  overflow-y: auto;
+  border: 1px solid #f0f0f0;
+  animation: slideIn 0.3s ease;
+  position: relative;
+}
+
+/* Modal heading */
+.cart-modal h2 {
+  margin: 0 0 2rem 0;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #1a1a1a;
+  text-align: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  letter-spacing: -0.5px;
+}
+
+/* Empty cart message */
+.cart-modal > p {
+  text-align: center;
+  color: #666;
+  margin: 3rem 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/* ------------------------------------------------------
+   CART ITEMS LIST - Clean Layout
+------------------------------------------------------ */
+.cart-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.cart-item {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  align-items: flex-start;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  background: #f8f8f8;
+  flex-shrink: 0;
+}
+
+.cart-item > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.cart-item h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  line-height: 1.4;
+}
+
+.cart-item p {
+  margin: 0.25rem 0;
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+/* ------------------------------------------------------
+   QUANTITY INPUT - Minimal Style
+------------------------------------------------------ */
+.cart-item label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cart-item input[type="number"] {
+  width: 70px;
+  padding: 0.5rem;
+  border: 1px solid #f0f0f0;
+  border-radius: 0;
+  font-size: 0.9rem;
+  text-align: center;
+  transition: border-color 0.2s ease;
+  background: #fafafa;
+}
+
+.cart-item input[type="number"]:focus {
+  outline: none;
+  border-color: #d0d0d0;
+  background: #ffffff;
+}
+
+/* ------------------------------------------------------
+   CART COLOR DISPLAY
+------------------------------------------------------ */
+.cart-color {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.75rem 0;
+}
+
+.cart-color-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #f0f0f0;
+  flex-shrink: 0;
+}
+
+.cart-color-label {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 300;
+}
+
+/* ------------------------------------------------------
+   ACTION BUTTONS - Consistent Style
+------------------------------------------------------ */
+.cart-item button {
+  background: transparent;
+  color: #666;
+  border: 1px solid #f0f0f0;
+  padding: 0.5rem 1rem;
+  border-radius: 0;
+  font-size: 0.8rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cart-item button:hover {
+  background: #1a1a1a;
+  color: #ffffff;
+  border-color: #1a1a1a;
+}
+
+/* ------------------------------------------------------
+   TOTAL PRICE - Clean Display
+------------------------------------------------------ */
+.cart-modal h3 {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #1a1a1a;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #fafafa;
+  border: 1px solid #f0f0f0;
+  letter-spacing: -0.5px;
+}
+
+/* ------------------------------------------------------
+   CUSTOMER FORM - Minimal Inputs
+------------------------------------------------------ */
+.customer-form {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.customer-form h3 {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.customer-form input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #f0f0f0;
+  border-radius: 0;
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+  background: #fafafa;
+  color: #1a1a1a;
+}
+
+.customer-form input:focus {
+  outline: none;
+  border-color: #d0d0d0;
+  background: #ffffff;
+}
+
+.customer-form input::placeholder {
+  color: #999;
+  font-weight: 300;
+}
+
+/* ------------------------------------------------------
+   CHECKOUT BUTTON - Primary Action
+------------------------------------------------------ */
+.checkout-btn {
+  width: 100%;
+  background: transparent;
+  color: #1a1a1a;
+  border: 1.5px solid #1a1a1a;
+  padding: 1rem;
+  border-radius: 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.checkout-btn:hover:not(:disabled) {
+  background: #1a1a1a;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.checkout-btn:disabled {
+  background: #f8f8f8;
+  color: #999;
+  border-color: #f0f0f0;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ------------------------------------------------------
+   CLOSE BUTTON - Secondary Action
+------------------------------------------------------ */
+.close-btn {
+  width: 100%;
+  background: transparent;
+  color: #666;
+  border: 1.5px solid #f0f0f0;
+  padding: 1rem;
+  border-radius: 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.close-btn:hover {
+  background: #1a1a1a;
+  color: #ffffff;
+  border-color: #1a1a1a;
+}
+
+/* ------------------------------------------------------
+   MESSAGE STYLING
+------------------------------------------------------ */
+.message {
+  text-align: center;
+  color: #666;
+  font-size: 0.85rem;
+  font-weight: 300;
+  margin: 1rem 0 0 0;
+  padding: 1rem;
+  background: #fafafa;
+  border: 1px solid #f0f0f0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ------------------------------------------------------
+   ANIMATIONS
+------------------------------------------------------ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ------------------------------------------------------
+   RESPONSIVE DESIGN
+------------------------------------------------------ */
+@media (max-width: 640px) {
+  .cart-modal-overlay {
+    padding: 0.5rem;
+  }
+  
+  .cart-modal {
+    padding: 1.5rem;
+    max-height: 95vh;
+  }
+  
+  .cart-modal h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .cart-item {
+    padding: 1.25rem 0;
+    gap: 1rem;
+  }
+  
+  .cart-item img {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .customer-form {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
+  
+  .cart-modal h3 {
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-modal {
+    padding: 1.25rem;
+  }
+  
+  .cart-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .cart-item img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .cart-item > div {
+    width: 100%;
+  }
+  
+  .cart-item label {
+    justify-content: center;
+  }
+  
+  .cart-color {
+    justify-content: center;
+  }
+  
+  .customer-form h3 {
+    text-align: center;
+  }
+  
+  .cart-item button {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+/* ------------------------------------------------------
+   CUSTOM SCROLLBAR
+------------------------------------------------------ */
+.cart-modal::-webkit-scrollbar {
+  width: 4px;
+}
+
+.cart-modal::-webkit-scrollbar-track {
+  background: #f8f8f8;
+}
+
+.cart-modal::-webkit-scrollbar-thumb {
+  background: #d0d0d0;
+}
+
+.cart-modal::-webkit-scrollbar-thumb:hover {
+  background: #b0b0b0;
+}
+
+/* ------------------------------------------------------
+   ENHANCED FOCUS STATES (Accessibility)
+------------------------------------------------------ */
+.cart-item input[type="number"]:focus,
+.customer-form input:focus {
+  border-color: #1a1a1a;
+}
+
+.checkout-btn:focus,
+.close-btn:focus,
+.cart-item button:focus {
+  outline: 2px solid #1a1a1a;
+  outline-offset: 2px;
+}
+
+/* ------------------------------------------------------
+   LOADING STATE ENHANCEMENT
+------------------------------------------------------ */
+.checkout-btn:disabled {
+  position: relative;
+}
+
+.checkout-btn:disabled::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid #999;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}

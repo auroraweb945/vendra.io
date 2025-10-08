@@ -1,0 +1,22 @@
+.sub-failed-container {
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(90deg, #f9f7ff, #fef6fb);
+    padding: 40px 20px; box-sizing: border-box; font-family: 'Segoe UI', sans-serif;
+  }
+  .sub-failed-card {
+    background: #fff; border-radius: 14px; padding: 28px 22px; max-width: 520px; width: 100%;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.1); text-align: center;
+  }
+  .icon { font-size: 2rem; margin-bottom: 8px; }
+  h2 { margin: 4px 0 10px; color: #b3261e; }
+  .actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
+  .try-again {
+    background: linear-gradient(90deg, #7b2ff7, #f107a3);
+    color: #fff; border: none; border-radius: 10px; padding: 10px 16px; cursor: pointer; font-weight: 700;
+  }
+  .try-again:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(123,47,247,.18); }
+  .ghost {
+    background: #fff; border: 1px solid #ddd; color: #333; border-radius: 10px; padding: 10px 16px; cursor: pointer; font-weight: 600;
+  }
+  .ghost:hover { background: #f7f7f7; }
+  

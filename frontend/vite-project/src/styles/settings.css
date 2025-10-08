@@ -1,0 +1,236 @@
+/* Settings Page Container */
+.settings-container {
+  padding: 2rem;
+  min-height: 100vh;
+  background: #faf9ff;
+  font-family: 'Segoe UI', sans-serif;
+  animation: fadeIn 0.5s ease;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Page Title */
+.settings-container h2 {
+  margin-bottom: 2.5rem;
+  color: #7b2ff7;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+/* Sections */
+.settings-section {
+  margin-bottom: 2.5rem;
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(123, 47, 247, 0.08);
+  border: 1px solid #f0ebff;
+}
+
+.settings-section h3 {
+  color: #7b2ff7;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #f5f2ff;
+}
+
+/* Profile Info */
+.profile-info {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #faf8ff;
+  border-radius: 12px;
+  border-left: 4px solid #7b2ff7;
+}
+
+.profile-info p {
+  margin: 0.5rem 0;
+  color: #555;
+  font-size: 1rem;
+}
+
+.profile-info strong {
+  color: #7b2ff7;
+  font-weight: 600;
+}
+
+/* Clickable Settings Rows */
+.settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1rem;
+  margin: 0.75rem 0;
+  background: #faf8ff;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.settings-row:hover {
+  background: #f5f0ff;
+  transform: translateX(4px);
+  border-color: #7b2ff7;
+  box-shadow: 0 4px 12px rgba(123, 47, 247, 0.1);
+}
+
+.settings-row-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.settings-row-icon {
+  font-size: 1.3rem;
+  width: 24px;
+  text-align: center;
+}
+
+.settings-row-text {
+  flex: 1;
+}
+
+.settings-row-title {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+.settings-row-description {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.settings-row-arrow {
+  color: #7b2ff7;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.settings-row:hover .settings-row-arrow {
+  transform: translateX(4px);
+}
+
+/* Message */
+.settings-message {
+  text-align: center;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #e6ffed;
+  color: #28a745;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  border-left: 4px solid #28a745;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .settings-container {
+    padding: 1.5rem;
+  }
+  
+  .settings-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .settings-section {
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  .settings-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .settings-row {
+    padding: 1rem;
+    margin: 0.5rem 0;
+  }
+  
+  .settings-row-title {
+    font-size: 0.95rem;
+  }
+  
+  .settings-row-description {
+    font-size: 0.85rem;
+  }
+  
+  .profile-info {
+    padding: 0.75rem;
+  }
+  
+  .profile-info p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-container {
+    padding: 1rem;
+  }
+  
+  .settings-container h2 {
+    font-size: 1.6rem;
+  }
+  
+  .settings-section {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+  
+  .settings-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .settings-row {
+    padding: 0.875rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .settings-row-content {
+    width: 100%;
+  }
+  
+  .settings-row-arrow {
+    align-self: flex-end;
+  }
+  
+  .profile-info {
+    padding: 0.625rem;
+  }
+  
+  .profile-info p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Loading states */
+.settings-container > p {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  font-size: 1.1rem;
+}

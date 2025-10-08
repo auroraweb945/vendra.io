@@ -1,0 +1,75 @@
+.plans-container {
+    max-width: 980px;
+    margin: 40px auto;
+    padding: 0 20px 40px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .plans-hero {
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 16px;
+    background: #fff;
+    color: #000;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    margin-bottom: 22px;
+  }
+  .plans-hero h1 { margin: 0 0 10px; font-size: 2rem; }
+  
+  .plans-status {
+    display: flex; justify-content: center; margin-bottom: 18px;
+  }
+  .badge {
+    padding: 10px 14px; border-radius: 8px; font-weight: 600;
+  }
+  .badge.active { background: #e7f7ef; color: #1d7a42; border: 1px solid #c7ecd7; }
+  .badge.expired { background: #fff2f2; color: #b3261e; border: 1px solid #ffd6d6; }
+  .badge.inactive { background: #f5f5ff; color: #5a3fd6; border: 1px solid #e8e6ff; }
+  
+  .plans-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+  
+  .plan-card {
+    background: #fff; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    padding: 24px 22px;
+  }
+  
+  .plan-head h2 { margin: 0 0 4px; color: #7b2ff7; }
+  .plan-head p { margin: 0; color: #666; }
+  
+  .plan-price { margin: 18px 0 12px; }
+  .price-line { font-size: 1.1rem; }
+  .price-line .big { font-size: 2rem; font-weight: 800; margin-right: 6px; }
+  .price-line.muted { color: #777; }
+  
+  .plan-features {
+    list-style: none; padding: 0; margin: 14px 0 18px;
+  }
+  .plan-features li { padding: 8px 0; border-bottom: 1px dashed #eee; color: #444; }
+  .plan-features li:last-child { border-bottom: none; }
+  
+  .subscribe-btn {
+    width: 100%; padding: 12px 18px; border: none; border-radius: 10px;
+    font-weight: 700; color: #fff; cursor: pointer;
+    background: linear-gradient(90deg, #7b2ff7, #f107a3);
+    transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+  }
+  .subscribe-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(123,47,247,.2); }
+  .subscribe-btn:disabled { opacity: .7; cursor: not-allowed; transform: none; box-shadow: none; }
+  
+  .tiny-note { margin-top: 10px; font-size: .85rem; color: #666; }
+  
+  .plans-footer-actions {
+    margin-top: 18px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;
+  }
+  .ghost-btn {
+    background: #fff; border: 1px solid #ddd; color: #333;
+    padding: 10px 14px; border-radius: 8px; cursor: pointer;
+  }
+  .ghost-btn:hover { background: #f6f6f6; }
+  
+  @media (max-width: 600px) {
+    .plans-hero { padding: 30px 14px; }
+    .plan-card { padding: 20px 16px; }
+  }
+  
