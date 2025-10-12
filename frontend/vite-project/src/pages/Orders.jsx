@@ -18,7 +18,7 @@ const Orders = () => {
     setLoading(true);
     const token = localStorage.getItem('token');
     axios
-      .get('http://localhost:5000/api/orders', {
+      .get('https://vendra-io.onrender.com/api/orders', {
         headers: { Authorization: `Bearer ${token}` },
         params: filters
       })
@@ -38,7 +38,7 @@ const Orders = () => {
   const handleStatusChange = (id, status) => {
     const token = localStorage.getItem('token');
     axios
-      .put(`http://localhost:5000/api/orders/${id}/status`, { status }, {
+      .put(`https://vendra-io.onrender.com/api/orders/${id}/status`, { status }, {
         headers: { Authorization: `Bearer ${token}` }
       })
       .then(() => fetchOrders());
@@ -120,7 +120,7 @@ const Orders = () => {
                       <button onClick={() => {
                         const token = localStorage.getItem('token');
                         axios
-                          .get(`http://localhost:5000/api/orders/${order.id}`, {
+                          .get(`https://vendra-io.onrender.com/api/orders/${order.id}`, {
                             headers: { Authorization: `Bearer ${token}` }
                           })
                           .then(res => setSelectedOrder(res.data.order));

@@ -19,7 +19,7 @@ const ChangeNameModal = ({ onClose, onNameUpdated }) => {
 
     try {
       const res = await axios.put(
-        'http://localhost:5000/api/profile/name',
+        'https://vendra-io.onrender.com/api/profile/name',
         { name },
         {
           headers: {

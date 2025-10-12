@@ -25,7 +25,7 @@ const StoreSettingsModal = ({ onClose }) => {
 
   const fetchStore = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/store', {
+      const res = await axios.get('https://vendra-io.onrender.com/api/store', {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -114,7 +114,7 @@ const StoreSettingsModal = ({ onClose }) => {
     formDataUpload.append('file', file);
 
     try {
-      const res = await axios.post('http://localhost:5000/api/upload', formDataUpload, {
+      const res = await axios.post('https://vendra-io.onrender.com/api/upload', formDataUpload, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data',
@@ -137,7 +137,7 @@ const StoreSettingsModal = ({ onClose }) => {
 
     try {
       await axios.put(
-        'http://localhost:5000/api/store/update',
+        'https://vendra-io.onrender.com/api/store/update',
         {
           ...formData,
           about: JSON.stringify(formData.about.filter((offer) => offer.trim() !== '')),

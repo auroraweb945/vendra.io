@@ -32,7 +32,7 @@ const Product = () => {
   // Fetch products
   const fetchProducts = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/products', {
+      const res = await axios.get('https://vendra-io.onrender.com/api/products', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -51,7 +51,7 @@ const Product = () => {
 
   const fetchLowStockProducts = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/products/low-stock', {
+      const res = await axios.get('https://vendra-io.onrender.com/api/products/low-stock', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -65,10 +65,10 @@ const Product = () => {
   const fetchCounts = async () => {
     try {
       const [totalRes, lowStockRes] = await Promise.all([
-        axios.get('http://localhost:5000/api/products/count', {
+        axios.get('https://vendra-io.onrender.com/api/products/count', {
           headers: { Authorization: `Bearer ${token}` },
         }),
-        axios.get('http://localhost:5000/api/products/low-stock?threshold=5', {
+        axios.get('https://vendra-io.onrender.com/api/products/low-stock?threshold=5', {
           headers: { Authorization: `Bearer ${token}` },
         }),
       ]);

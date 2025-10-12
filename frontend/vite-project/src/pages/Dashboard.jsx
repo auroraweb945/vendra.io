@@ -17,7 +17,7 @@ const Dashboard = () => {
   useEffect(() => {
     const token = localStorage.getItem('token');
     axios
-      .get('http://localhost:5000/api/dashboard', {
+      .get('https://vendra-io.onrender.com/api/dashboard', {
         headers: { Authorization: `Bearer ${token}` }
       })
       .then(res => setStats(res.data))

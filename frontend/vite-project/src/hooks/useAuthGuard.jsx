@@ -37,7 +37,7 @@ export default function useAuthGuard() {
     // Validate token and get user info
     const validateAuth = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/profile", {
+        const res = await axios.get("https://vendra-io.onrender.com/api/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
         

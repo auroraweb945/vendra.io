@@ -73,7 +73,7 @@ const CreateStore = () => {
     formDataUpload.append('file', file);
 
     try {
-      const res = await axios.post('http://localhost:5000/api/upload', formDataUpload, {
+      const res = await axios.post('https://vendra-io.onrender.com/api/upload', formDataUpload, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data',
@@ -105,7 +105,7 @@ const CreateStore = () => {
 
     try {
       const res = await axios.post(
-        'http://localhost:5000/api/store/create',
+        'https://vendra-io.onrender.com/api/store/create',
         {
           ...form,
           about: JSON.stringify(form.about.filter((o) => o.trim() !== '')), // 🟢 send offers array as JSON string

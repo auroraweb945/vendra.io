@@ -17,7 +17,7 @@ const ChangeEmailModal = ({ onClose, onEmailUpdated }) => {
 
     try {
       await axios.put(
-        'http://localhost:5000/api/profile/email',
+        'https://vendra-io.onrender.com/api/profile/email',
         { email },
         {
           headers: {

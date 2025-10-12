@@ -18,7 +18,7 @@ const ChangePasswordModal = ({ onClose }) => {
 
     try {
       await axios.put(
-        'http://localhost:5000/api/profile/password',
+        'https://vendra-io.onrender.com/api/profile/password',
         { oldPassword, newPassword },
         {
           headers: { Authorization: `Bearer ${token}` },

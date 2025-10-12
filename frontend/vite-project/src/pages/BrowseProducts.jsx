@@ -34,7 +34,7 @@ const BrowseProducts = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/storefront/${slug}`);
+        const res = await axios.get(`https://vendra-io.onrender.com/api/storefront/${slug}`);
         setStore(res.data.store);
         setProducts(res.data.products);
       } catch (err) {
@@ -137,7 +137,7 @@ const BrowseProducts = () => {
         total_price: getTotalPrice()
       };
 
-      const res = await axios.post(`http://localhost:5000/api/orders`, payload);
+      const res = await axios.post(`https://vendra-io.onrender.com/api/orders`, payload);
       const orderId = res.data?.orderId;
 
       // Redirect to confirmation page with full cart items (includes name/image)

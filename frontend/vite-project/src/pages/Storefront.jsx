@@ -13,7 +13,7 @@ const Storefront = () => {
   useEffect(() => {
     const fetchStoreData = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/storefront/${slug}`);
+        const res = await axios.get(`https://vendra-io.onrender.com/api/storefront/${slug}`);
         setStore(res.data.store);
         setProducts(res.data.products || []);
       } catch (err) {

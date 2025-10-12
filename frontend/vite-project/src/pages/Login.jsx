@@ -13,11 +13,11 @@ const Login = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', form);
+      const res = await axios.post('https://vendra-io.onrender.com/api/auth/login', form);
       localStorage.setItem('token', res.data.token);
 
       // Fetch profile to check if user has a store
-      const profileRes = await axios.get('http://localhost:5000/api/profile', {
+      const profileRes = await axios.get('https://vendra-io.onrender.com/api/profile', {
         headers: { Authorization: `Bearer ${res.data.token}` },
       });
 

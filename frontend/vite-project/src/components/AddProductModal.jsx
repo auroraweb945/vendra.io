@@ -64,7 +64,7 @@ const AddProductModal = ({ onClose, onProductAdded }) => {
     formDataUpload.append('file', file);
 
     try {
-      const res = await axios.post('http://localhost:5000/api/upload', formDataUpload, {
+      const res = await axios.post('https://vendra-io.onrender.com/api/upload', formDataUpload, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data',
@@ -83,7 +83,7 @@ const AddProductModal = ({ onClose, onProductAdded }) => {
     e.preventDefault();
 
     try {
-      const res = await axios.post('http://localhost:5000/api/products', form, {
+      const res = await axios.post('https://vendra-io.onrender.com/api/products', form, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

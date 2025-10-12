@@ -8,7 +8,7 @@ const DeleteProductModal = ({ product, onClose, onProductDeleted }) => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:5000/api/products/${product.id}`, {
+      await axios.delete(`https://vendra-io.onrender.com/api/products/${product.id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

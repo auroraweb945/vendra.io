@@ -21,7 +21,7 @@ export default function useSubscriptionGuard() {
 
     const checkSubscription = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/subscribe/status", {
+        const res = await axios.get("https://vendra-io.onrender.com/api/subscribe/status", {
           headers: { Authorization: `Bearer ${token}` },
         });
 

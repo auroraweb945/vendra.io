@@ -15,7 +15,7 @@ const Sidebar = () => {
   useEffect(() => { 
     const fetchStore = async () => { 
       try { 
-        const res = await axios.get("http://localhost:5000/api/store", { 
+        const res = await axios.get("https://vendra-io.onrender.com/api/store", { 
           headers: { Authorization: `Bearer ${token}` }, 
         }); 
         setStore(res.data); // store contains slug, name, etc. 
