@@ -1,7 +1,7 @@
 // src/pages/CreateStore.jsx
 import React, { useState } from 'react';
 import axios from 'axios';
-import '../styles/createStore.css';
+import '../styles/createstore.css';
 import { useNavigate } from 'react-router-dom';
 
 const CreateStore = () => {
