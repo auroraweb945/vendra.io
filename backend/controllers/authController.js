@@ -76,7 +76,7 @@ exports.forgotPassword = async (req, res) => {
 
     await saveResetToken(email, token, expiry); 
 
-    const resetLink = `http://localhost:5173/reset-password?token=${token}`; 
+    const resetLink = `https://vendra-io-1.onrender.com/reset-password?token=${token}`; 
 
     await sendMail( 
       email, 
