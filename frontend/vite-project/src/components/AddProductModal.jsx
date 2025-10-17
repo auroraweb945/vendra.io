@@ -107,6 +107,7 @@ const AddProductModal = ({ onClose, onProductAdded }) => {
       <div className="modal">
         <h3>Create New Product</h3>
         <form onSubmit={handleSubmit} className="modal-form">
+          <label>Product Name</label>
           <input
             type="text"
             name="name"
@@ -115,6 +116,7 @@ const AddProductModal = ({ onClose, onProductAdded }) => {
             onChange={handleChange}
             required
           />
+          <label>Price</label>
           <input
             type="number"
             name="price"
@@ -124,6 +126,7 @@ const AddProductModal = ({ onClose, onProductAdded }) => {
             step="0.01"
             required
           />
+          <label>Description</label>
           <input
             type="text"
             name="description"
@@ -131,6 +134,7 @@ const AddProductModal = ({ onClose, onProductAdded }) => {
             value={form.description}
             onChange={handleChange}
           />
+          <label>Stock Number</label>
           <input
             type="number"
             name="stock"
