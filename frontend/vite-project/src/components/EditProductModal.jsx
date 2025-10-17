@@ -94,6 +94,7 @@ const EditProductModal = ({ product, onClose, onProductUpdated }) => {
       <div className="modal">
         <h3>Edit Product</h3>
         <form onSubmit={handleSubmit} className="modal-form">
+          <label>Product Name</label>
           <input
             type="text"
             name="name"
@@ -102,6 +103,8 @@ const EditProductModal = ({ product, onClose, onProductUpdated }) => {
             placeholder="Product Name"
             required
           />
+
+          <label>Price</label>
           <input
             type="number"
             name="price"
@@ -111,6 +114,8 @@ const EditProductModal = ({ product, onClose, onProductUpdated }) => {
             placeholder="Price"
             required
           />
+
+          <label>Description</label>
           <input
             type="text"
             name="description"
@@ -118,6 +123,8 @@ const EditProductModal = ({ product, onClose, onProductUpdated }) => {
             onChange={handleChange}
             placeholder="Description"
           />
+
+          <label>Stock Number</label>
           <input
             type="number"
             name="stock"
