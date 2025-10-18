@@ -155,28 +155,33 @@ const EditProductModal = ({ product, onClose, onProductUpdated }) => {
 
           {/* Colors */}
           <label>Available Colors</label>
-          <button type="button" onClick={handleAddColor}>+ Add Color</button>
+          <button type="button" onClick={handleAddColor} className="add-color-btn">
+            + Add Color
+          </button>
+
           <div className="color-list">
             {form.available_colors?.map((color, index) => (
               <div key={index} className="color-item">
-                <input
-                  type="color"
-                  value={color}
-                  onChange={(e) => handleColorChange(index, e.target.value)}
-                />
-                <span
-                  className="color-preview"
-                  style={{
-                    display: 'inline-block',
-                    width: '20px',
-                    height: '20px',
-                    borderRadius: '50%',
-                    background: color,
-                    margin: '0 8px',
-                  }}
-                ></span>
-                <span>{color}</span>
-                <button type="button" onClick={() => handleRemoveColor(index)}>❌</button>
+                <div className="color-picker-wrapper" title="Click to choose a color">
+                  <input
+                    type="color"
+                    value={color}
+                    onChange={(e) => handleColorChange(index, e.target.value)}
+                    className="color-input"
+                  />
+                  <div
+                    className="color-circle"
+                    style={{ background: color }}
+                  ></div>
+                </div>
+                <span className="color-code">{color}</span>
+                <button
+                  type="button"
+                  className="remove-color-btn"
+                  onClick={() => handleRemoveColor(index)}
+                >
+                  ✕
+                </button>
               </div>
             ))}
           </div>

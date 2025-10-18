@@ -117,54 +117,105 @@
   text-align: center;
 }
 
-/* Color list */
+/* ------------------------------------------------------
+   COLOR PICKER ENHANCEMENT
+------------------------------------------------------ */
+
 .color-list {
+  margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  margin: 0.5rem 0;
 }
 
 .color-item {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 0.75rem;
-  background: #f8fafc;
+  background: #fafafa;
+  border: 1px solid #f0f0f0;
+  padding: 0.75rem 1rem;
   border-radius: 8px;
-  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
 }
 
-.color-item input[type="color"] {
-  width: 40px;
-  height: 40px;
-  border: none;
-  border-radius: 6px;
-  padding: 0;
+.color-item:hover {
+  background: #f5f5f5;
+}
+
+/* Wrapper for the color input + circle */
+.color-picker-wrapper {
+  position: relative;
+  width: 36px;
+  height: 36px;
   cursor: pointer;
 }
 
-.color-preview {
-  width: 24px;
-  height: 24px;
+.color-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  opacity: 0; /* hide the default square */
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Circle that shows the color */
+.color-circle {
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  border: 2px solid #e2e8f0;
-  flex-shrink: 0;
+  border: 2px solid #e0e0e0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 1;
 }
 
-.color-item span:last-of-type {
-  flex: 1;
-  font-size: 0.9rem;
-  color: #4a5568;
+.color-picker-wrapper:hover .color-circle {
+  transform: scale(1.1);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 }
 
-.color-item button {
-  background: none;
+/* Color code display */
+.color-code {
+  font-size: 0.85rem;
+  color: #333;
+  letter-spacing: 0.3px;
+  font-family: monospace;
+}
+
+/* Remove color button */
+.remove-color-btn {
+  background: transparent;
   border: none;
+  color: #999;
+  font-size: 1rem;
   cursor: pointer;
-  padding: 0.25rem;
-  color: #e53e3e;
-  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+.remove-color-btn:hover {
+  color: #ff4d4d;
+}
+
+/* Add color button */
+.add-color-btn {
+  background: transparent;
+  color: #1a1a1a;
+  border: 1.5px solid #1a1a1a;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.add-color-btn:hover {
+  background: #1a1a1a;
+  color: #fff;
 }
 
 /* File upload */
@@ -530,7 +581,17 @@ small {
     gap: 0.5rem;
   }
   
-  .color-item input[type="color"] {
+  .color-picker-wrapper {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .color-input {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .color-circle {
     width: 32px;
     height: 32px;
   }
