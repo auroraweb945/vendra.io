@@ -182,6 +182,8 @@ const EditProductModal = ({ product, onClose, onProductUpdated }) => {
                 >
                   ✕
                 </button>
+                <small className="color-hint">Click the circle to choose a color</small>
+
               </div>
             ))}
           </div>
