@@ -270,6 +270,7 @@ const StoreSettingsModal = ({ onClose }) => {
             + Add Feedback
           </button>
         )}
+        <br/>
 
         <button className="save-btn" onClick={updateStore} disabled={uploading}>
           {uploading ? 'Uploading...' : 'Update Store'}
