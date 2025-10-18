@@ -19,6 +19,7 @@ const CartModal = ({
   return (
     <div className="cart-modal-overlay">
       <div className="cart-modal">
+        <div className="cart-content">
         <h2>Your Cart</h2>
 
         {cartItems.length === 0 ? (
@@ -117,6 +118,7 @@ const CartModal = ({
             </div>
           </>
         )}
+        </div>
 
         <button className="close-btn" onClick={onClose}>Close</button>
       </div>

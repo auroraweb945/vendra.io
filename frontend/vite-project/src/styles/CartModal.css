@@ -294,6 +294,22 @@
   border-color: #1a1a1a;
 }
 
+/* Make the main content scrollable */
+.cart-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 0.5rem; /* optional: prevent scrollbar overlap */
+}
+
+/* Keep close button at bottom, separate from content */
+.close-btn {
+  flex-shrink: 0;
+  position: sticky;
+  bottom: 0;
+  background: #fafafa;
+  border-top: 1px solid #f0f0f0;
+}
+
 /* ------------------------------------------------------
    MESSAGE STYLING
 ------------------------------------------------------ */
