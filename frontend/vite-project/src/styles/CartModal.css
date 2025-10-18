@@ -287,6 +287,8 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   flex-shrink: 0;
+  position: absolute;
+  bottom: 0;
 }
 
 .close-btn:hover {
