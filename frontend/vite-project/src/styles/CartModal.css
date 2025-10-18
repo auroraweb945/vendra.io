@@ -287,8 +287,6 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   flex-shrink: 0;
-  position: sticky;
-  bottom: 0;
 }
 
 .close-btn:hover {
@@ -301,7 +299,6 @@
 .cart-content {
   flex: 1;
   overflow-y: auto;
-  padding-right: 0.5rem; /* optional: prevent scrollbar overlap */
 }
 
 
