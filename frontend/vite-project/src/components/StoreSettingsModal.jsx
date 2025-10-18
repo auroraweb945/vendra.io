@@ -166,9 +166,11 @@ const StoreSettingsModal = ({ onClose }) => {
 
         <label>Store Name:</label>
         <input name="name" value={formData.name} onChange={handleChange} />
+        <br/>
 
         <label>Store Slug:</label>
         <input name="slug" value={formData.slug} onChange={handleChange} />
+        <br/>
 
         <label>Description:</label>
         <textarea
@@ -178,6 +180,7 @@ const StoreSettingsModal = ({ onClose }) => {
           maxLength={100}
         />
         <small>{formData.description.length}/100 characters</small>
+        <br/>
 
         {/* 🟢 Offers Section */}
         <label>Store Offers (up to 3):</label>
@@ -205,6 +208,7 @@ const StoreSettingsModal = ({ onClose }) => {
             + Add Offer
           </button>
         )}
+        <br/>
 
         {/* 🖼 Logo Upload */}
         <label>Logo:</label>
@@ -216,6 +220,7 @@ const StoreSettingsModal = ({ onClose }) => {
             style={{ width: '80px', marginTop: '10px', borderRadius: '8px' }}
           />
         )}
+        <br/>
 
         {/* 🖼 Background Upload */}
         <label>Background Image:</label>
@@ -231,6 +236,7 @@ const StoreSettingsModal = ({ onClose }) => {
             style={{ width: '100%', marginTop: '10px', borderRadius: '8px' }}
           />
         )}
+        <br/>
 
         {/* Feedbacks */}
         <label>Customer Feedbacks:</label>
