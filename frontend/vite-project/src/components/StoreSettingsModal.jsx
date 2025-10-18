@@ -203,6 +203,7 @@ const StoreSettingsModal = ({ onClose }) => {
             )}
           </div>
         ))}
+        <br/>
         {formData.about.length < 3 && (
           <button type="button" onClick={addOfferField} className="add-feedback-btn">
             + Add Offer
