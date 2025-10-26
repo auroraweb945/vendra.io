@@ -10,3 +10,4 @@ router.get('/', authenticate, checkSubscription, storeController.getStore);
 router.put('/update', authenticate, checkSubscription, updateStoreValidator, storeController.updateStore);
 
 module.exports = router;
+ 

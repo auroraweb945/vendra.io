@@ -2,7 +2,7 @@ const { createStore, findStoreByUserId, updateStore } = require('../models/store
 
 // Create Store
 exports.createStore = async (req, res) => {
-  const { name, slug, description, logo_url, about, background_url, feedbacks } = req.body;
+  const { name, slug, description, logo_url, about, background_url, feedbacks, contact_number } = req.body;
 
   if (!name || !slug) return res.status(400).json({ error: 'Store name and slug are required' });
   if (about && Array.isArray(about) && about.length > 3) {
@@ -26,7 +26,8 @@ exports.createStore = async (req, res) => {
       logo_url: logo_url || '',
       about: about || [],
       background_url: background_url || '',
-      feedbacks: feedbacks || []
+      feedbacks: feedbacks || [],
+      contact_number: contact_number || null
     };
 
     await createStore(store);
@@ -52,7 +53,7 @@ exports.getStore = async (req, res) => {
 
 // Update Store
 exports.updateStore = async (req, res) => {
-  const { name, slug, description, logo_url, about, background_url, feedbacks } = req.body;
+  const { name, slug, description, logo_url, about, background_url, feedbacks, contact_number } = req.body;
 
   if (!name || !slug) return res.status(400).json({ error: 'Store name and slug are required' });
   if (about && Array.isArray(about) && about.length > 3) {
@@ -69,7 +70,8 @@ exports.updateStore = async (req, res) => {
     logo_url: logo_url || '',
     about: about || [],
     background_url: background_url || '',
-    feedbacks: feedbacks || []
+    feedbacks: feedbacks || [],
+    contact_number: contact_number || null
   };
 
   try {
@@ -79,4 +81,4 @@ exports.updateStore = async (req, res) => {
     console.error('Error updating store:', err);
     res.status(500).json({ error: 'Failed to update store' });
   }
-};
+}; 

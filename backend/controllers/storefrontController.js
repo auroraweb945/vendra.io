@@ -44,12 +44,13 @@ exports.getStorefrontData = async (req, res) => {
         description: storeData.description,
         about: storeData.about ? JSON.parse(storeData.about) : [],
         background_url: storeData.background_url || '',
-        feedbacks: storeData.feedbacks ? JSON.parse(storeData.feedbacks) : []
+        feedbacks: storeData.feedbacks ? JSON.parse(storeData.feedbacks) : [],
+        contact_number: storeData.contact_number || null
       },
       products,
     });
   } catch (err) {
     console.error('Error fetching storefront data:', err);
     res.status(500).json({ error: 'Failed to fetch storefront data' });
-  }
+  } 
 };

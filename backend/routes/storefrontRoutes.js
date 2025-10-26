@@ -5,3 +5,4 @@ const { getStorefrontData } = require('../controllers/storefrontController');
 router.get('/:slug', getStorefrontData);
 
 module.exports = router;
+ 
