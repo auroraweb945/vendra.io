@@ -96,6 +96,26 @@
   width: 100%;
 }
 
+.whatsapp-button {
+  background: #25D366;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.whatsapp-button:hover {
+  background: #20b954;
+  transform: translateY(-1px);
+}
+
 /* ------------------------------------------------------
    HERO SECTION - Minimal Overlay
 ------------------------------------------------------ */
@@ -411,12 +431,17 @@
 @media (max-width: 768px) {
   .storefront-navbar {
     padding: 1rem;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 1rem;
   }
 
   .navbar-links {
     gap: 1.5rem;
+  }
+
+  .whatsapp-button {
+    font-size: 0.85rem;
+    padding: 0.6rem 1.2rem;
   }
 
   .hero-title {

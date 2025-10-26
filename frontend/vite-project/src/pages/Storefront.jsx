@@ -67,6 +67,17 @@ const Storefront = () => {
           <li><a href="#products">Shop</a></li>
           <li><a href="#feedback">Reviews</a></li>
         </ul>
+        {store.contact_number && (
+          <a
+            href={`https://wa.me/${store.contact_number.replace(/[^\d]/g, '')}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="whatsapp-button"
+            title="Contact us on WhatsApp"
+          >
+            💬 WhatsApp
+          </a>
+        )}
       </nav>
 
       {/* 🖼️ Hero Section with overlayed text */}
