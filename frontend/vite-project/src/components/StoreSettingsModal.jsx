@@ -17,7 +17,6 @@ const StoreSettingsModal = ({ onClose }) => {
     logo_url: '',
     background_url: '',
     feedbacks: [{ author: '', message: '' }],
-    contact_number: '',
   });
 
   useEffect(() => {
@@ -52,7 +51,6 @@ const StoreSettingsModal = ({ onClose }) => {
           Array.isArray(res.data.feedbacks) && res.data.feedbacks.length > 0
             ? res.data.feedbacks.slice(0, 3)
             : [{ author: '', message: '' }],
-        contact_number: res.data.contact_number || '',
       });
     } catch (err) {
       setError('Failed to load store');
@@ -182,17 +180,6 @@ const StoreSettingsModal = ({ onClose }) => {
           maxLength={100}
         />
         <small>{formData.description.length}/100 characters</small>
-        <br/>
-
-        <label>Contact Number (WhatsApp):</label>
-        <input 
-          name="contact_number"
-          type="tel"
-          value={formData.contact_number}
-          onChange={handleChange}
-          placeholder="e.g., +1234567890"
-        />
-        <small>Enter your WhatsApp number (with country code)</small>
         <br/>
 
         {/* 🟢 Offers Section */}

@@ -15,7 +15,6 @@ const CreateStore = () => {
     logo_url: '',
     background_url: '',
     feedbacks: [{ author: '', message: '' }],
-    contact_number: '',
   });
 
   const [msg, setMsg] = useState('');
@@ -150,16 +149,6 @@ const CreateStore = () => {
           maxLength={100}
         />
         <small>{form.description.length}/100 characters</small>
-
-        <label>Contact Number (WhatsApp):</label>
-        <input 
-          type="tel" 
-          name="contact_number" 
-          value={form.contact_number} 
-          onChange={handleInputChange} 
-          placeholder="e.g., +1234567890"
-        />
-        <small>Enter your WhatsApp number (with country code)</small>
 
         {/* 🟢 Offers Section */}
         <label>About (What You Offer):</label>
