@@ -45,7 +45,9 @@ exports.getStorefrontData = async (req, res) => {
         about: storeData.about ? JSON.parse(storeData.about) : [],
         background_url: storeData.background_url || '',
         feedbacks: storeData.feedbacks ? JSON.parse(storeData.feedbacks) : [],
-        contact_number: storeData.contact_number || null
+        contact_number: storeData.contact_number || null,
+        instagram_url: storeData.instagram_url || null,
+        tiktok_url: storeData.tiktok_url || null
       },
       products,
     });

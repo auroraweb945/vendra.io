@@ -2,10 +2,10 @@ const db = require('../config/db');
 
 // Create Store
 const createStore = async (store) => {
-  const { user_id, name, slug, description, logo_url, about, background_url, feedbacks, contact_number } = store;
+  const { user_id, name, slug, description, logo_url, about, background_url, feedbacks, contact_number, instagram_url, tiktok_url } = store;
   const query = `
-    INSERT INTO stores (user_id, name, slug, description, logo_url, about, background_url, feedbacks, contact_number) 
-    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+    INSERT INTO stores (user_id, name, slug, description, logo_url, about, background_url, feedbacks, contact_number, instagram_url, tiktok_url) 
+    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
     RETURNING *;
   `;
   const values = [
@@ -17,7 +17,9 @@ const createStore = async (store) => {
     about ? JSON.stringify(about) : '[]',
     background_url,
     feedbacks ? JSON.stringify(feedbacks) : '[]',
-    contact_number || null
+    contact_number || null,
+    instagram_url || null,
+    tiktok_url || null
   ];
   return db.query(query, values);
 };
@@ -30,11 +32,11 @@ const findStoreByUserId = async (userId) => {
 
 // Update store
 const updateStore = async (userId, updates) => {
-  const { name, slug, description, logo_url, about, background_url, feedbacks, contact_number } = updates;
+  const { name, slug, description, logo_url, about, background_url, feedbacks, contact_number, instagram_url, tiktok_url } = updates;
   const query = `
     UPDATE stores 
-    SET name = $1, slug = $2, description = $3, logo_url = $4, about = $5, background_url = $6, feedbacks = $7, contact_number = $8, updated_at = NOW()
-    WHERE user_id = $9
+    SET name = $1, slug = $2, description = $3, logo_url = $4, about = $5, background_url = $6, feedbacks = $7, contact_number = $8, instagram_url = $9, tiktok_url = $10, updated_at = NOW()
+    WHERE user_id = $11
     RETURNING *;
   `;
   const values = [
@@ -46,6 +48,8 @@ const updateStore = async (userId, updates) => {
     background_url,
     feedbacks ? JSON.stringify(feedbacks) : '[]',
     contact_number || null,
+    instagram_url || null,
+    tiktok_url || null,
     userId
   ];
   return db.query(query, values);
