@@ -78,6 +78,20 @@ const Storefront = () => {
             💬 WhatsApp
           </a>
         )}
+        {(store.instagram_url || store.tiktok_url) && (
+          <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginLeft: '10px' }}>
+            {store.instagram_url && (
+              <a href={store.instagram_url} target="_blank" rel="noopener noreferrer" title="Instagram">
+                Instagram
+              </a>
+            )}
+            {store.tiktok_url && (
+              <a href={store.tiktok_url} target="_blank" rel="noopener noreferrer" title="TikTok">
+                TikTok
+              </a>
+            )}
+          </div>
+        )}
       </nav>
 
       {/* 🖼️ Hero Section with overlayed text */}

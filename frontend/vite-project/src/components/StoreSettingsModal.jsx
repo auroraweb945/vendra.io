@@ -18,6 +18,8 @@ const StoreSettingsModal = ({ onClose }) => {
     background_url: '',
     feedbacks: [{ author: '', message: '' }],
     contact_number: '',
+    instagram_url: '',
+    tiktok_url: '',
   });
 
   useEffect(() => {
@@ -53,6 +55,8 @@ const StoreSettingsModal = ({ onClose }) => {
             ? res.data.feedbacks.slice(0, 3)
             : [{ author: '', message: '' }],
         contact_number: res.data.contact_number || '',
+        instagram_url: res.data.instagram_url || '',
+        tiktok_url: res.data.tiktok_url || '',
       });
     } catch (err) {
       setError('Failed to load store');
@@ -193,6 +197,26 @@ const StoreSettingsModal = ({ onClose }) => {
           placeholder="e.g., +1234567890"
         />
         <small>Enter your WhatsApp number (with country code)</small>
+        <br/>
+
+        <label>Instagram Page URL:</label>
+        <input
+          name="instagram_url"
+          type="url"
+          value={formData.instagram_url}
+          onChange={handleChange}
+          placeholder="https://instagram.com/yourpage"
+        />
+        <br/>
+
+        <label>TikTok Page URL:</label>
+        <input
+          name="tiktok_url"
+          type="url"
+          value={formData.tiktok_url}
+          onChange={handleChange}
+          placeholder="https://www.tiktok.com/@yourhandle"
+        />
         <br/>
 
         {/* 🟢 Offers Section */}

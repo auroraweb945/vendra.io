@@ -16,6 +16,8 @@ const CreateStore = () => {
     background_url: '',
     feedbacks: [{ author: '', message: '' }],
     contact_number: '',
+    instagram_url: '',
+    tiktok_url: '',
   });
 
   const [msg, setMsg] = useState('');
@@ -160,6 +162,24 @@ const CreateStore = () => {
           placeholder="e.g., +1234567890"
         />
         <small>Enter your WhatsApp number (with country code)</small>
+
+        <label>Instagram Page URL:</label>
+        <input
+          type="url"
+          name="instagram_url"
+          value={form.instagram_url}
+          onChange={handleInputChange}
+          placeholder="https://instagram.com/yourpage"
+        />
+
+        <label>TikTok Page URL:</label>
+        <input
+          type="url"
+          name="tiktok_url"
+          value={form.tiktok_url}
+          onChange={handleInputChange}
+          placeholder="https://www.tiktok.com/@yourhandle"
+        />
 
         {/* 🟢 Offers Section */}
         <label>About (What You Offer):</label>
