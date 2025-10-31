@@ -47,7 +47,8 @@ const StoreSettingsModal = ({ onClose }) => {
         name: res.data.name || '',
         slug: res.data.slug || '',
         description: res.data.description || '',
-        about: aboutArray.slice(0, 3),
+        about: Array.isArray(res.data.about) && res.data.about.length > 0
+        ? res.data.about.slice(0, 3),
         logo_url: res.data.logo_url || '',
         background_url: res.data.background_url || '',
         feedbacks:
