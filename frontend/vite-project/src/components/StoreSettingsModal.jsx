@@ -32,23 +32,21 @@ const StoreSettingsModal = ({ onClose }) => {
         headers: { Authorization: `Bearer ${token}` },
       });
 
-      let aboutArray = [];
-      try {
-        // Try parsing existing about as JSON array
-        aboutArray = Array.isArray(JSON.parse(res.data.about))
-          ? JSON.parse(res.data.about)
-          : [res.data.about || ''];
-      } catch {
-        // If it's a string, wrap it in an array
-        aboutArray = res.data.about ? [res.data.about] : [''];
-      }
+      let offers = [];
+
+        try {
+          const parsed = JSON.parse(res.data.about);
+          offers = Array.isArray(parsed) ? parsed.slice(0, 3) : [parsed];
+        } catch {
+          offers = res.data.about ? [res.data.about] : [''];
+        }
+
 
       setFormData({
         name: res.data.name || '',
         slug: res.data.slug || '',
         description: res.data.description || '',
-        about: Array.isArray(res.data.about) && res.data.about.length > 0
-        ? res.data.about.slice(0, 3),
+        about: offers,
         logo_url: res.data.logo_url || '',
         background_url: res.data.background_url || '',
         feedbacks:
