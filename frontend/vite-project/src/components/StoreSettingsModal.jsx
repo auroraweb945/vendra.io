@@ -34,12 +34,12 @@ const StoreSettingsModal = ({ onClose }) => {
 
       let offers = [];
 
-        try {
-          const parsed = JSON.parse(res.data.about);
-          offers = Array.isArray(parsed) ? parsed.slice(0, 3) : [parsed];
-        } catch {
-          offers = res.data.about ? [res.data.about] : [''];
-        }
+      try {
+        const parsed = JSON.parse(res.data.about);
+        offers = Array.isArray(parsed) ? parsed.slice(0, 3) : [parsed];
+      } catch {
+        offers = res.data.about ? [res.data.about] : [''];
+      }
 
 
       setFormData({
