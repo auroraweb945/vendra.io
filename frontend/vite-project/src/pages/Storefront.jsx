@@ -67,31 +67,7 @@ const Storefront = () => {
           <li><a href="#products">Shop</a></li>
           <li><a href="#feedback">Reviews</a></li>
         </ul>
-        {store.contact_number && (
-          <a
-            href={`https://wa.me/${store.contact_number.replace(/[^\d]/g, '')}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="whatsapp-button"
-            title="Contact us on WhatsApp"
-          >
-            💬 WhatsApp
-          </a>
-        )}
-        {(store.instagram_url || store.tiktok_url) && (
-          <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginLeft: '10px' }}>
-            {store.instagram_url && (
-              <a href={store.instagram_url} target="_blank" rel="noopener noreferrer" title="Instagram">
-                Instagram
-              </a>
-            )}
-            {store.tiktok_url && (
-              <a href={store.tiktok_url} target="_blank" rel="noopener noreferrer" title="TikTok">
-                TikTok
-              </a>
-            )}
-          </div>
-        )}
+        
       </nav>
 
       {/* 🖼️ Hero Section with overlayed text */}
@@ -163,6 +139,32 @@ const Storefront = () => {
           <a href="#shop">Shop</a>
           <a href="#offers">About</a>
           <a href="#feedback">FAQ</a>
+
+          {store.contact_number && (
+          <a
+            href={`https://wa.me/${store.contact_number.replace(/[^\d]/g, '')}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="whatsapp-button"
+            title="Contact us on WhatsApp"
+          >
+            💬 WhatsApp
+          </a>
+        )}
+        {(store.instagram_url || store.tiktok_url) && (
+          <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginLeft: '10px' }}>
+            {store.instagram_url && (
+              <a href={store.instagram_url} target="_blank" rel="noopener noreferrer" title="Instagram">
+                Instagram
+              </a>
+            )}
+            {store.tiktok_url && (
+              <a href={store.tiktok_url} target="_blank" rel="noopener noreferrer" title="TikTok">
+                TikTok
+              </a>
+            )}
+          </div>
+        )}
         </div>
         <p>© {new Date().getFullYear()} {store.name}. All rights reserved.</p>
       </footer>
