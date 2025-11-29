@@ -1,93 +1,115 @@
 /* src/styles/auth.css */
-body {
-  margin: 0;
-  padding: 0;
-  background: #fff;
-  font-family: 'Segoe UI', sans-serif;
-}
+/* Minimal, clean login styling – scoped to .auth-wrapper only */
 
-/* Page background (instead of styling <body>, scope it to .auth-wrapper) */
 .auth-wrapper {
-  background: #fff;
-  padding: 40px;
+  background: #ffffff;
+  padding: 32px 28px;
   border-radius: 12px;
   width: 100%;
   max-width: 400px;
-  margin: 15% auto; /* centers it without using body flex */
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 0.5s ease-in-out;
+  margin: 10vh auto;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  border: 1px solid #e5e7eb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  animation: fadeIn 0.4s ease-out;
 }
 
+/* Title */
 .auth-wrapper h2 {
-  margin-bottom: 25px;
-  font-size: 2rem;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  font-weight: 600;
   text-align: center;
-  background: linear-gradient(90deg, #7b2ff7, #f107a3);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #111827;
 }
 
 /* Form */
 .auth-wrapper form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 14px;
 }
 
 /* Inputs */
 .auth-wrapper input {
-  padding: 12px 14px;
-  border: 1px solid #ddd;
+  padding: 10px 12px;
   border-radius: 8px;
-  font-size: 1rem;
-  transition: all 0.2s ease;
+  border: 1px solid #d1d5db;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.auth-wrapper input::placeholder {
+  color: #9ca3af;
 }
 
 .auth-wrapper input:focus {
-  border-color: #7b2ff7;
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(123,47,247,0.15);
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.12);
+  background-color: #f9fafb;
 }
 
 /* Button */
 .auth-wrapper button {
-  background: linear-gradient(90deg, #7b2ff7, #f107a3);
-  color: #fff;
-  padding: 12px;
-  font-size: 1rem;
+  margin-top: 6px;
+  background: #111827;
+  color: #ffffff;
+  padding: 10px 12px;
+  font-size: 0.98rem;
   font-weight: 600;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
 }
 
 .auth-wrapper button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+  background: #020617;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.18);
 }
 
 /* Links under the form */
 .auth-wrapper .link {
-  margin-top: 12px;
-  font-size: 0.9rem;
+  margin-top: 10px;
+  font-size: 0.85rem;
   text-align: center;
-  color: #555;
+  color: #6b7280;
 }
 
 .auth-wrapper .link a {
-  color: #7b2ff7;
+  color: #2563eb;
   font-weight: 500;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
+
 .auth-wrapper .link a:hover {
-  color: #f107a3;
+  color: #1d4ed8;
   text-decoration: underline;
 }
 
-/* Animation */
+/* Small fade-in animation */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(15px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .auth-wrapper {
+    margin: 8vh 16px;
+    padding: 24px 20px;
+  }
+
+  .auth-wrapper h2 {
+    font-size: 1.4rem;
+  }
 }
